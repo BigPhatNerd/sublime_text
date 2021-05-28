@@ -1,0 +1,42 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"install_prereleases":
+	[
+		"Babel"
+	],
+	"installed_packages":
+	[
+		"All Autocomplete",
+		"Auto Close HTML Tags",
+		"auto-save",
+		"AutomaticFullscreen",
+		"Babel",
+		"Babel Snippets",
+		"BeautifyRuby",
+		"BracketHighlighter",
+		"Emmet",
+		"ESLint",
+		"HTML-CSS-JS Prettify",
+		"JavaScript Completions",
+		"JavaScript Enhancements",
+		"JsPrettier",
+		"LiveReload",
+		"LiveReloadMake",
+		"MarkdownPreview",
+		"Material Theme",
+		"Notes",
+		"Package Control",
+		"ProductiveSnippetsRuby",
+		"Ruby Debugger",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-contrib-eslint_d",
+		"Terminus",
+		"tern_for_sublime",
+		"TrailingSpaces",
+		"View In Browser"
+	]
+}

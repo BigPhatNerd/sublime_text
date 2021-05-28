@@ -1,0 +1,17 @@
+<snippet>
+    <content>
+        <![CDATA[
+try {
+	${1:}
+} catch(err) {
+	${2:}
+	console.error(err.message);
+	res.status(500).send('Server Error');
+}
+]]>
+    </content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>try</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+</snippet>

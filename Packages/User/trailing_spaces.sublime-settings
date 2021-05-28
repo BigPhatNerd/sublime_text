@@ -1,0 +1,7 @@
+{
+    "trailing_spaces_enabled": true,
+    {
+        "keys": ["ctrl+shift+d"],
+        "command": "toggle_trailing_spaces"
+    }
+}

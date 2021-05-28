@@ -1,0 +1,127 @@
+[
+    {
+        "keys": ["alt+shift+k"],
+        "command": "reindent",
+        "args":
+        {
+            "single_line": false
+        }
+    },
+    {
+        "keys": ["alt+`"],
+        "command": "toggle_terminus_panel"
+    },
+
+    {
+        "keys": ["super+shift+k"],
+        "command": "htmlprettify"
+    },
+    {
+        "keys": ["ctrl+shift+s"],
+        "command": "auto_save"
+    },
+    {
+        "keys": ["ctrl+shift+'"],
+        "command": "rename_tag"
+    },
+
+    // Auto close tags
+    {
+        "keys": [">"],
+        "command": "auto_close_tag",
+        "args":
+        {
+            "prefix": ">"
+        },
+        "context": [
+        {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.html meta.tag -string -punctuation.definition.tag.begin.html -meta.scope.between-tag-pair.html, text.xml meta.tag -string -punctuation.definition.tag.begin.xml -meta.scope.between-tag-pair.xml",
+            "match_all": true
+        },
+        {
+            "key": "preceding_text",
+            "operator": "not_regex_contains",
+            "operand": "(?:\\<(?:img|br|hr|meta|link|base|input)\\>^<]*)|/$"
+        }]
+    },
+    // Line and Tab when hitting enter between tags 
+    {
+        "keys": ["enter"],
+        "command": "insert_snippet",
+        "args":
+        {
+            "contents": "\n\t$0\n"
+        },
+        "context": [
+        {
+            "key": "setting.auto_indent",
+            "operator": "equal",
+            "operand": true
+        },
+        {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "meta.scope.between-tag-pair"
+        }]
+    },
+    {
+        "keys": ["tab"],
+        "command": "expand_abbreviation_by_tab",
+        "context": [
+        {
+            "operand": "source.js",
+            "operator": "equal",
+            "match_all": true,
+            "key": "selector"
+        },
+        {
+            "match_all": true,
+            "key": "selection_empty"
+        },
+        {
+            "operator": "equal",
+            "operand": false,
+            "match_all": true,
+            "key": "has_next_field"
+        },
+        {
+            "operand": false,
+            "operator": "equal",
+            "match_all": true,
+            "key": "auto_complete_visible"
+        },
+        {
+            "match_all": true,
+            "key": "is_abbreviation"
+        }]
+    },
+    {
+        "keys": ["/"],
+        "command": "close_tag",
+        "args":
+        {
+            "insert_slash": true
+        },
+        "context": [
+        {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "(text.html, text.xml, meta.jsx.js) - string - comment",
+            "match_all": true
+        },
+        {
+            "key": "preceding_text",
+            "operator": "regex_match",
+            "operand": ".*<$",
+            "match_all": true
+        },
+        {
+            "key": "setting.auto_close_tags"
+        }]
+    },
+
+
+
+]
